@@ -13,13 +13,13 @@ To get it running on your local machine, follow the steps below:
 1. Run the commands below in your terminal:
 
 ```
-git clone https://github.com/israelvictory/Expresso.git
+git clone https://github.com/israelvictory/HNGi8_Task2.git
 ```
 
 2. change directory to diary:
 
 ```
-cd Expresso/diary
+cd HNGi8_Task2/hng
 ```
 
 3. Install the requirements with the command below:
