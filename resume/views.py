@@ -18,23 +18,14 @@ def home(request):
     return render(request, 'resume/index.html', context)
 
 
-# def sendEmail(request):
+def send_message(request):
+    name = request.POST.get("name")
+    email = request.POST.get("email")
+    subject = request.POST.get("subject")
+    message = request.POST.get("message")
 
-#     if request.method == 'POST':
-#         template = render_to_string('projects/email_template.html', {
-#             'name': request.POST['name'],
-#             'email': request.POST['email'],
-#             'subject': request.POST['subject'],
-#             'message': request.POST['message'],
-#         })
-
-#         email = EmailMessage(
-#             request.POST['subject'],
-#             template,
-#             settings.EMAIL_HOST_USER,
-#             ['israelvictory87@gmail.com']
-#         )
-
-#         email.fail_silently = False
-#         email.send()
-#     return render(request, 'projects/email_sent.html')
+    print(name)
+    print(email)
+    print(subject)
+    print(message)
+    return redirect("resume:home")
