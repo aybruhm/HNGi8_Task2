@@ -144,7 +144,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = "/static/"
-STAIC_ROOT = "static"
+STATIC_ROOT = "static"
 STATICFILES_DIRS = [
     BASE_DIR / "resume/static"
 ]
