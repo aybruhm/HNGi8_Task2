@@ -1,0 +1,240 @@
+/* Global Section  */
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+body {
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+body,
+main {
+    background: #000;
+}
+
+.bord {
+    height: 3px;
+    width: 60px;
+    background-color: rgb(197, 22, 183);
+    position: relative;
+    margin: 20px 0 20px 0;
+    display: inline-block;
+}
+
+.black-color {
+    background-color: #000 !important;
+}
+
+.icons {
+    color: #fff;
+    display: block;
+    font-size: 35px;
+    list-style: none;
+}
+
+.white-icons>a {
+    color: #fff;
+}
+
+.dark-icons>a {
+    color: #000;
+    list-style: none;
+    font-size: 30px;
+}
+
+
+/* Global Section */
+
+
+/* Home Section */
+
+#home {
+    background: url('../img/img-2.jpg') no-repeat fixed -1px;
+    height: 550px;
+}
+
+.brand-title {
+    font-size: 25px;
+}
+
+.ul-text {
+    font-size: 18px;
+}
+
+.sr-only {
+    border-radius: 2px solid;
+}
+
+nav {
+    border-bottom: 3px solid rgb(197, 22, 183);
+}
+
+.btn-pr {
+    background-color: rgb(197, 22, 183);
+}
+
+.rounded-button {
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+.bg-title {
+    font-size: 300%;
+}
+
+.round {
+    border-radius: 25px solid;
+    font: Arial 50px;
+}
+
+
+/* Home Section */
+
+
+/* About Section */
+
+#about {
+    border-top: 1px solid rgb(197, 22, 183);
+}
+
+#about img {
+    height: 300px;
+    width: 300px;
+    max-width: 15em;
+    position: relative;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+#about a.inst-link {
+    color: rgb(197, 22, 183);
+}
+
+
+/* About Section */
+
+
+/* Technology Section */
+
+#technologies {
+    border-top: 1px solid rgb(197, 22, 183);
+    background: url(../img/img-1.jpg) fixed -15%;
+    padding-bottom: 50px;
+}
+
+#technologies i {
+    font-size: 55px;
+}
+
+
+/* Technology Section */
+
+
+/* Works Section */
+
+#works {
+    border-top: 1px solid rgb(197, 22, 183);
+}
+
+h2.title {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.ul-text {
+    font-size: 20px;
+    list-style-type: none;
+}
+
+.tag {
+    display: inline-block;
+    color: #fff;
+    background-color: #000;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 2px 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.tg-red {
+    background-color: #f30b0b;
+}
+
+.tg-blue {
+    background-color: #0000ff;
+}
+
+.tg-purple {
+    background-color: #a717a7;
+}
+
+.tg-green {
+    background-color: rgb(23, 187, 23);
+}
+
+
+/* Work Section */
+
+
+/* Contact Section */
+
+#contact {
+    border-top: 2px solid rgb(197, 22, 183);
+    background: url(../img/bg-index.jpg) center;
+}
+
+#contact p {
+    font-size: 18px;
+}
+
+#contact .btn-light {
+    background-color: #fff;
+    color: #000;
+}
+
+.my-form label.active {
+    color: #fff;
+}
+
+.my-form:focus {
+    color: #fff;
+}
+
+
+/* Contact Section */
+
+
+/* Footer Section */
+
+#footer {
+    border-top: 3px solid rgb(197, 22, 183);
+    background-color: #000;
+}
+
+#footer #tdmark {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: .6em;
+    color: #000;
+    font-family: "Maven pro", sans-serif;
+    font-size: 1.6em;
+    font-weight: 500;
+    display: inline;
+}
+
+#footer #copyright {
+    font-family: "Maven pro", sans-serif;
+    font-weight: 500;
+    color: #fff;
+}
+
+#copyright {
+    font-size: 18px;
+}
+
+
+/* Footer Section */
