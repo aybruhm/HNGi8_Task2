@@ -1,13 +1,14 @@
 /* Global Section  */
+@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500&display=swap");
 
 * {
-    padding: 0px;
-    margin: 0px;
+    margin: 0%;
+    padding: 0%;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
 body {
-    font-family: 'Baloo Tamma 2', cursive;
+    font-family: "Recursive", sans-serif;
+    scroll-behavior: smooth;
 }
 
 body,
@@ -184,7 +185,9 @@ h2.title {
 
 #contact {
     border-top: 2px solid rgb(197, 22, 183);
-    background: url(../img/bg-index.jpg) center;
+    background: url(../img/code-1.jpg) fixed -15%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #contact p {
@@ -204,6 +207,35 @@ h2.title {
     color: #fff;
 }
 
+div#contact_form form {
+    text-align: left;
+}
+
+div#contact_form form input {
+    margin-bottom: 10px;
+    border-radius: 0%;
+    background-color: transparent;
+    height: 40px;
+    color: #000;
+}
+
+div#contact_form form textarea {
+    border-radius: 0%;
+    background-color: transparent;
+    color: #000;
+}
+
+button.btn-submit {
+    background-color: rgb(197, 22, 183);
+    color: aliceblue;
+    transition: all 0.2s ease-in-out;
+}
+
+button.btn-submit:hover {
+    background-color: rgb(197, 22, 183);
+    color: aliceblue;
+    transition: all 0.4s ease-in-out;
+}
 
 /* Contact Section */
 
@@ -211,7 +243,6 @@ h2.title {
 /* Footer Section */
 
 #footer {
-    border-top: 3px solid rgb(197, 22, 183);
     background-color: #000;
 }
 
