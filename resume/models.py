@@ -3,12 +3,9 @@ from django.db import models
 
 class User(models.Model):
     name = models.CharField(max_length=100)
-    bio = models.TextField()
     profile_picture = models.ImageField(upload_to="images/")
     linkedin = models.URLField()
-    facebook = models.URLField()
     twitter = models.URLField()
-    instagram = models.URLField()
     github = models.URLField()
 
     def __str__(self):

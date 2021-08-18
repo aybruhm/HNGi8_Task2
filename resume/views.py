@@ -15,7 +15,7 @@ def home(request):
         'projects': projects,
         'user': user,
     }
-    return render(request, 'projects/home.html', context)
+    return render(request, 'resume/index.html', context)
 
 
 # def sendEmail(request):
