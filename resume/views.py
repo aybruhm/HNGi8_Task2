@@ -1,6 +1,8 @@
 
 from django.shortcuts import render, redirect
 from .models import Project, User
+from django.contrib import messages
+from resume.models import Message
 
 # Email Configuration
 from django.template.loader import render_to_string
@@ -24,8 +26,10 @@ def send_message(request):
     subject = request.POST.get("subject")
     message = request.POST.get("message")
 
-    print(name)
-    print(email)
-    print(subject)
-    print(message)
+    save_message = Message(
+        name=name, email=email, subject=subject, message=message
+    )
+    save_message.save()
+    messages.success(request, "Yayy! Message submitted.")
+
     return redirect("resume:home")
