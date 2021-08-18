@@ -1,3 +1,7 @@
 from django.contrib import admin
+from resume.models import User, Project, Tag
 
-# Register your models here.
+
+admin.site.register(User)
+admin.site.register(Project)
+admin.site.register(Tag)
