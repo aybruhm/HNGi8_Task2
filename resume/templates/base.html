@@ -1,0 +1,235 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="I'm a design-minded, detailed oriented software engineer passionate about combining beautiful code with beautiful design. I create software for the web." />
+    <meta name="keywords"
+        content="Python Freelancer, Django Developer, Django, Python, Freelancer, Python Django Web Developer, Python Web Developer" />
+    <!-- For Production Mode -->
+    {% comment %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg=="
+        crossorigin="anonymous" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet" />
+    {% endcomment %}
+    <script src="https://kit.fontawesome.com/6e47be172b.js" crossorigin="anonymous"></script>
+
+    <!-- For Development Mode -->
+    <!-- <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" /> -->
+    <link rel="stylesheet" href="{% static 'css/mdb.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <title>Israel Abraham - Python Django Web Developer</title>
+</head>
+
+<body>
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark black-color">
+            <div class="container">
+                <!-- Navbar brand -->
+                <img src="{% static 'img/portfolio-logo.png' %}" class="mr-3 img-responsive" height="50">
+                <a class="navbar-brand brand-title" href="#">Israel Abraham</a>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="border-color: white;"></span>
+                </button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+                    <!-- Links -->
+                    <ul class="navbar-nav ml-auto ul-text">
+                        <li class="nav-item mr-1 active">
+                            <a class="nav-link" href="#">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mr-1">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item mr-1">
+                            <a class="nav-link" href="#technologies">Technologies</a>
+                        </li>
+                        <li class="nav-item mr-1">
+                            <a class="nav-link" href="#works">Portfolio</a>
+                        </li>
+                        <li class="nav-item mr-1">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--/.Navbar-->
+
+        <!-- Background Image -->
+        <div id="home" class="text-center image px-0">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-white px-">
+                    <h1 class="mb-3 bg-title">ISRAEL ABRAHAM</h1>
+                    <h4 class="mb-3 bg-niche">Python Django Web Developer</h4>
+                    {% for me in user %}
+                    <a href="{% static 'documents/resume.pdf' %}" role="button"
+                        class="btn btn-pr rounded-button">Resume</a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- Background Image -->
+    </header>
+
+    <main>
+        <section id="about" class="mb-5 pb-5 white-text">
+            <div class="container">
+                <div class="text-center">
+                    <h1 class="pt-5">About Me</h1>
+                    <hr class="bord" />
+                    <div class="row">
+                        {% for me in user %}
+                        <div class="col-lg-4 col-md-6 col-sm-4 pt-5">
+                            <img src="{{ me.profile_picture.url }}" alt="profile-picture" class="py-4" />
+                        </div>
+                        <div class="col-lg-8 col-md-6 col-sm-8 text-left py-3">
+                            <h1 class="title pt-5">Hello, I'm {{ me.name }}!</h1>
+                            <p class="text-muted">
+                                I'm a design-minded, detailed oriented software engineer
+                                passionate about combining beautiful code with beautiful
+                                design. I'm a second year student at the
+                                <a href="https://www.ksitm.edu.ng" class="inst-link">
+                                    Institute of Technology and Management, in Katsina,</a>
+                                Nigeria studying Software Engineering. I have experience
+                                developing and designing software for the web, from simple
+                                landing pages to progressive web applications. I strive to
+                                create software that are not only functions efficient under
+                                the hood, but also provide intuitive, pixel-perfect user
+                                experiences. I love learning new and better ways to create
+                                seamless user experiences, and scalable code.
+                            </p>
+                            <ul class="icons justify-content-center">
+                                <li class="white-icons">
+                                    <!-- Facebook -->
+                                    <a class="fb-ic" href="{{ me.facebook }}" target="_blank">
+                                        <i class="fa fa-facebook-square icon" aria-hidden="true"></i>
+                                    </a>
+                                    <!-- Twitter -->
+                                    <a class="tw-ic" href="{{ me.twitter }}" target="_blank">
+                                        <i class="fa fa-twitter-square icon" aria-hidden="true"></i>
+                                    </a>
+                                    <!-- GitHub -->
+                                    <a class="gh-ic" href="{{ me.github }}" target="_blank">
+                                        <i class="fa fa-github icon" aria-hidden="true"></i>
+                                    </a>
+                                    <!--Linkedin -->
+                                    <a class="li-ic" href="{{ me.linkedin }}" target="_blank">
+                                        <i class="fa fa-linkedin-square icon" aria-hidden="true"></i>
+                                    </a>
+                                    <!--Instagram-->
+                                    <a class="ins-ic" href="{{ me.instagram }}" target="_blank">
+                                        <i class="fa fa-instagram icon" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="technologies" class="white-text pb-5 pt-2">
+            <div class="container">
+                <div class="text-center pb-2">
+                    <h1 class="pt-5">Technologies</h1>
+                    <hr class="bord" />
+                    <div class="row pt-3">
+                        <div class="col-lg-4">
+                            <i class="fa fa-laptop icon pt-2" aria-hidden="true"></i>
+                            <h2 class="title pb-1 pt-3">Languages</h2>
+                            <ul class="justify-content-center text-center ul-text pt-1 pb-2">
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Bootstrap</li>
+                                <li>Python</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <i class="fa fa-server icon pt-2" aria-hidden="true"></i>
+                            <h2 class="title pb-1 pt-3">Development</h2>
+                            <ul class="justify-content-center text-center ul-text pb-1 pt-2">
+                                <li>Django</li>
+                                <li>Flask</li>
+                                <li>PostgreSQL</li>
+                                <li>Heroku</li>
+                                <li>Restful Web Services</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <i class="fa fa-terminal icon pt-2" aria-hidden="true"></i>
+                            <h2 class="title pb-1 pt-3">Tools</h2>
+                            <ul class="justify-content-center text-center ul-text pb-1 pt-2">
+                                <li>VSCode</li>
+                                <li>PyCharm</li>
+                                <li>Command Line | Bash</li>
+                                <li>Git and GitHub</li>
+                                <li>SSH</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="pt-5 pb-5">
+            <div class="container">
+                <div class="text-center pb-2 mb-3">
+                    <h1 class="pt-5 white-text">Some of my works</h1>
+                    <hr class="bord" />
+                    {% block content %} {% endblock content %}
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="pb-5 pt-5 mb-5 white-text mask text-center">
+            <div class="container">
+                <h2 class="text-center">Wanna work with me?</h2>
+                <hr class="bord" />
+                <div class="mt-3 mb-5">
+                    <p class="text-center h3 mb-5">
+                        Feel free to get in touch with me. <br /> I am always open to discussing new projects, creative
+                        ideas or opportunities to be part of your visions.
+                    </p>
+                    <a href="maito:israelvictory87@gmail.com" role="button"
+                        class="btn btn-pr rounded-button mb-5">Contact</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="page-footer justify-content-center text-center">
+        <div class="text-center">
+            <a id="tdmark" class="btn" href="#home">IA</a>
+        </div>
+        <div class="footer-copyright text-center py-3">
+            <p id="copyright" class="mt-2">
+                Copyright © 2020 | Israel Abraham <br />
+                <span>Python Django Web Developer</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js"
+        integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ=="
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
