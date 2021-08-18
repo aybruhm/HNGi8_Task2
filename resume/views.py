@@ -30,6 +30,6 @@ def send_message(request):
         name=name, email=email, subject=subject, message=message
     )
     save_message.save()
-    messages.success(request, "Yayy! Message submitted.")
+    messages.success(request, "Yayy! Your message has been submitted.")
 
     return redirect("resume:home")
